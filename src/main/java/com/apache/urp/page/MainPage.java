@@ -16,6 +16,11 @@ public class MainPage extends FluentPage {
 	
 	@FindBy(xpath = "/html/body/div[1]/aside/section/ul/li[2]/ul/li[3]/a")
 	private FluentWebElement clickYongHuManage;// 点击二级菜单 用户管理
+	
+	@FindBy(xpath = "/html/body/div[1]/header/nav/div/ul/li/a/span")
+	private FluentWebElement clickZhangHao;// 点击首页面的右上角账号
+	@FindBy(className = "btn btn-default btn-flat")
+	private FluentWebElement clickTuiChu;// 点击首页面的右上角账号后，点击退出
 
 	@Page
 	private ZuZhiJiaGouPage zuZhiJiaGouPage; // 组织架构>>组织架构页面
@@ -49,6 +54,16 @@ public class MainPage extends FluentPage {
 	public YongHuManagePage clickYongHuManage() {
 		clickYongHuManage.click();
 		return yongHuManagePage;
+	}
+
+
+	/**
+	 * 退出主页面
+	 */
+	public void tuichu() {
+		clickZhangHao.click();
+		clickTuiChu.click();
+		
 	}
 
 }

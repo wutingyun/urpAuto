@@ -25,7 +25,6 @@ public class ZuzhijiagouCase01 extends BaseFluentTest {
 	/**
 	 * 系统管理>>组织架构，组织架构的新增、编辑、删除
 	 */
-
 	List<Account> accounts;
 	String zuzhimingcheng; // 组织名称
 	String telnumber; // 电话
@@ -58,7 +57,7 @@ public class ZuzhijiagouCase01 extends BaseFluentTest {
 	@Test
 	public void addZuZhiJiaGou() {
 		try {
-			// 通过登录页面，输入用户名和密码，进入主页面。
+			// 打开浏览器，输入网址，进入登录页面
 			goTo(loginPage);
 			loginPage.login(accounts.get(0));
 
@@ -78,22 +77,22 @@ public class ZuzhijiagouCase01 extends BaseFluentTest {
 			// 新增的组织与查询出来的组织，比较标题是否一致，若一致，则说明新增成功。
 			Assert.assertEquals(newZuZhiMingCheng, zuzhimingcheng, "组织名称新增不成功！");
 
+			// 退出
+			mainPage.tuichu();
+
 		} catch (Exception e) {
 			takeScreenShot("D:\\主页面.jpg");
 			takeHtmlDump("D:\\error.html");
 			throw e;
 		}
-
 	}
 
 	/**
 	 * 编辑组织架构
 	 */
-
 	@Test
 	public void editZuZhiJiaGou() {
 		try {
-			// 通过登录页面，输入用户名和密码，进入主页面。
 			goTo(loginPage);
 			loginPage.login(accounts.get(0));
 
@@ -107,14 +106,16 @@ public class ZuzhijiagouCase01 extends BaseFluentTest {
 			// 组织添加完成之后，输入“组织机构名称”，点击“查询”
 			zuZhiJiaGouPage.selectByZuzhimingcheng(zuzhimingcheng);
 
-			// 编辑组织架构
-			zuZhiJiaGouPage.clickEdit();
+			// 编辑组织架构 zuZhiJiaGouPage.clickEdit();
 			zuZhiJiaGouPage.edit(zuzhimingchengedit);
 
 			// 验证是否编辑成功
 			zuZhiJiaGouPage.selectByZuzhimingcheng(zuzhimingchengedit);// 组织添加完成之后，输入“组织机构名称”，点击“查询”
 			String newZuZhiMingChengedit = zuZhiJiaGouPage.getZuzhimingcheng();// 将查询出来的结果，提取该组织名称
 			Assert.assertEquals(newZuZhiMingChengedit, zuzhimingchengedit, "组织机构编辑不成功！");
+
+			// 退出
+			mainPage.tuichu();
 
 		} catch (Exception e) {
 			takeScreenShot("D:\\主页面.jpg");
@@ -127,7 +128,6 @@ public class ZuzhijiagouCase01 extends BaseFluentTest {
 	@Test
 	public void deleteZuZhiJiaGou() {
 		try {
-			// 通过登录页面，输入用户名和密码，进入主页面。
 			goTo(loginPage);
 			loginPage.login(accounts.get(0));
 
@@ -145,9 +145,14 @@ public class ZuzhijiagouCase01 extends BaseFluentTest {
 			zuZhiJiaGouPage.clickDelete();
 
 			// 验证是否删除成功。
-			zuZhiJiaGouPage.selectByZuzhimingcheng(zuzhimingchengedit);// 输入“组织机构名称”，点击“查询”
+			zuZhiJiaGouPage.selectByZuzhimingcheng(zuzhimingchengedit);
+
+			// 输入“组织机构名称”，点击“查询”
 			String newZuZhiMingChengedit = zuZhiJiaGouPage.getZuzhimingcheng();// 将查询出来的结果，提取该组织名称
 			Assert.assertNull(newZuZhiMingChengedit, "删除不成功");
+
+			// 退出
+			mainPage.tuichu();
 
 		} catch (Exception e) {
 			takeScreenShot("D:\\主页面.jpg");

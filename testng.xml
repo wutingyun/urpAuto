@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="urp" parallel="false" configfailurepolicy="continue"
+<suite name="urpxitong" parallel="false" configfailurepolicy="continue"
 	skipfailedinvocationcounts="true" preserve-order="true">
 	<!--URP系统，后台管理-->
 	<test name="zuzhijiagouCase01" verbose="10"> <!--测试用例：系统管理>>组织架构，组织架构的新增、编辑、删除，并对其验证-->
@@ -18,10 +18,10 @@
 	
 	
 
-	<!-- reportNg是对testng输入报告美化的插件。测试后能生成比testng自带的输出报告更美观的报告 -->
+<!--  reportNg是对testng输入报告美化的插件。测试后能生成比testng自带的输出报告更美观的报告 
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
-	</listeners>
+	</listeners> -->
 
 </suite> <!-- Suite -->

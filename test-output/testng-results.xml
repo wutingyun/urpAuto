@@ -1,57 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="3" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21890" started-at="2018-06-05T01:11:26Z" finished-at="2018-06-05T01:11:47Z">
+  <suite name="urpxitong" duration-ms="50190" started-at="2018-07-09T08:56:44Z" finished-at="2018-07-09T08:57:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21890" started-at="2018-06-05T01:11:26Z" finished-at="2018-06-05T01:11:47Z">
-      <class name="org.fluentlenium.example.spring.Case1">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:org.fluentlenium.example.spring.Case1@7cbd213e]" name="beforeTest" is-config="true" duration-ms="152" started-at="2018-06-05T09:11:26Z" finished-at="2018-06-05T09:11:26Z">
+    <test name="zuzhijiagouCase01" duration-ms="50190" started-at="2018-07-09T08:56:44Z" finished-at="2018-07-09T08:57:34Z">
+      <class name="com.apache.urpcase.ZuzhijiagouCase01">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@43bd930a]" name="beforeTest" is-config="true" duration-ms="139" started-at="2018-07-09T16:56:44Z" finished-at="2018-07-09T16:56:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:org.fluentlenium.example.spring.Case1@7cbd213e]" name="beforeMethod" is-config="true" duration-ms="3880" started-at="2018-06-05T09:11:26Z" finished-at="2018-06-05T09:11:30Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@43bd930a]" name="beforeMethod" is-config="true" duration-ms="3882" started-at="2018-07-09T16:56:44Z" finished-at="2018-07-09T16:56:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void org.fluentlenium.example.spring.Case1.addNoticeCase01()]]>
+                <![CDATA[public void com.apache.urpcase.ZuzhijiagouCase01.addZuZhiJiaGou()]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@75d4a5c2]]>
+                <![CDATA[org.testng.TestRunner@3c46e67a]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="addNoticeCase01()[pri:0, instance:org.fluentlenium.example.spring.Case1@7cbd213e]" name="addNoticeCase01" duration-ms="17013" started-at="2018-06-05T09:11:30Z" finished-at="2018-06-05T09:11:47Z">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
+        <test-method status="FAIL" signature="addZuZhiJiaGou()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@43bd930a]" name="addZuZhiJiaGou" duration-ms="13349" started-at="2018-07-09T16:56:48Z" finished-at="2018-07-09T16:57:01Z">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=60.0.3112.113)
-  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 6.1.7600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
-System info: host: 'BAD-PC', ip: '192.168.71.23', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_92'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\ADMINI~1\AppData\Local\Temp\scoped_dir6884_5392}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 7b6d7a84a72e2627654fa16f7afcc781]]>
+              <![CDATA[Expected condition failed: waiting for By.cssSelector: .treeUl_1_span (first) (Lazy Element) (tried for 5 second(s) with 500 MILLISECONDS interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for By.cssSelector: .treeUl_1_span (first) (Lazy Element) (tried for 5 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:264)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at org.fluentlenium.core.wait.FluentWait.until(FluentWait.java:152)
+	at org.fluentlenium.core.hook.wait.WaitHook.findElement(WaitHook.java:88)
+	at org.fluentlenium.core.proxy.ComponentHandler.getLocatorResultImpl(ComponentHandler.java:68)
+	at org.fluentlenium.core.proxy.ComponentHandler.getLocatorResultImpl(ComponentHandler.java:17)
+	at org.fluentlenium.core.proxy.AbstractLocatorHandler.getLocatorResult(AbstractLocatorHandler.java:140)
+	at org.fluentlenium.core.proxy.AbstractLocatorHandler.invoke(AbstractLocatorHandler.java:270)
+	at org.fluentlenium.core.proxy.ComponentHandler.invoke(ComponentHandler.java:98)
+	at com.sun.proxy.$Proxy18.click(Unknown Source)
+	at org.fluentlenium.core.domain.FluentWebElement.click(FluentWebElement.java:113)
+	at com.apache.urp.page.ZuZhiJiaGouPage.clickZuZhiJiaGou_shu(ZuZhiJiaGouPage.java:43)
+	at com.apache.urpcase.ZuzhijiagouCase01.addZuZhiJiaGou(ZuzhijiagouCase01.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".treeUl_1_span"}
   (Session info: chrome=60.0.3112.113)
   (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 6.1.7600 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
 System info: host: 'BAD-PC', ip: '192.168.71.23', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_92'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\ADMINI~1\AppData\Local\Temp\scoped_dir6884_5392}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 7b6d7a84a72e2627654fa16f7afcc781
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\ADMINI~1\AppData\Local\Temp\scoped_dir7016_16019}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: cb5775ddc2f5680d633c7784507a337e
+*** Element info: {Using=css selector, value=.treeUl_1_span}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -64,12 +94,85 @@ Session ID: 7b6d7a84a72e2627654fa16f7afcc781
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:703)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:388)
-	at org.fluentlenium.core.FluentDriver.takeScreenShot(FluentDriver.java:175)
-	at org.fluentlenium.core.inject.ContainerFluentControl.takeScreenShot(ContainerFluentControl.java:20)
-	at org.fluentlenium.adapter.FluentAdapter.takeScreenShot(FluentAdapter.java:51)
-	at org.fluentlenium.example.spring.Case1.addNoticeCase01(Case1.java:68)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:416)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:510)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:408)
+	at org.fluentlenium.core.inject.InjectionElementLocator.findElement(InjectionElementLocator.java:65)
+	at org.fluentlenium.core.hook.BaseHook.findElement(BaseHook.java:52)
+	at org.fluentlenium.core.hook.wait.WaitHook.access$201(WaitHook.java:17)
+	at org.fluentlenium.core.hook.wait.WaitHook$2.apply(WaitHook.java:92)
+	at org.fluentlenium.core.hook.wait.WaitHook$2.apply(WaitHook.java:88)
+	at org.fluentlenium.core.wait.FluentWait$2.apply(FluentWait.java:155)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 35 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addZuZhiJiaGou -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@43bd930a]" name="afterMethod" is-config="true" duration-ms="846" started-at="2018-07-09T16:57:01Z" finished-at="2018-07-09T16:57:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addZuZhiJiaGou status=FAILURE method=ZuzhijiagouCase01.addZuZhiJiaGou()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@43bd930a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@43bd930a]" name="beforeMethod" is-config="true" duration-ms="3423" started-at="2018-07-09T16:57:02Z" finished-at="2018-07-09T16:57:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.apache.urpcase.ZuzhijiagouCase01.editZuZhiJiaGou()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@3c46e67a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="editZuZhiJiaGou()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@43bd930a]" name="editZuZhiJiaGou" duration-ms="9642" started-at="2018-07-09T16:57:05Z" finished-at="2018-07-09T16:57:15Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: Element [[ChromeDriver: chrome on XP (448f26a3a7125718783f202b663ab8be)] -> xpath: /html/body/div[1]/aside/section/ul/li[2]/ul/li[2]/a] is not clickable (tried for 5 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'BAD-PC', ip: '192.168.71.23', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_92'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: Element [[ChromeDriver: chrome on XP (448f26a3a7125718783f202b663ab8be)] -> xpath: /html/body/div[1]/aside/section/ul/li[2]/ul/li[2]/a] is not clickable (tried for 5 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'BAD-PC', ip: '192.168.71.23', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_92'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:264)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at org.fluentlenium.core.wait.FluentWait.untilPredicate(FluentWait.java:131)
+	at org.fluentlenium.core.conditions.wait.WaitConditionInvocationHandler.until(WaitConditionInvocationHandler.java:139)
+	at org.fluentlenium.core.conditions.wait.WaitConditionInvocationHandler.until(WaitConditionInvocationHandler.java:170)
+	at org.fluentlenium.core.conditions.wait.WaitConditionInvocationHandler.waitForCondition(WaitConditionInvocationHandler.java:207)
+	at org.fluentlenium.core.conditions.wait.WaitConditionInvocationHandler.invoke(WaitConditionInvocationHandler.java:185)
+	at com.sun.proxy.$Proxy20.clickable(Unknown Source)
+	at org.fluentlenium.core.hook.wait.WaitHook.click(WaitHook.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.fluentlenium.core.proxy.AbstractLocatorHandler.invoke(AbstractLocatorHandler.java:294)
+	at org.fluentlenium.core.proxy.AbstractLocatorHandler.invokeWithRetry(AbstractLocatorHandler.java:280)
+	at org.fluentlenium.core.proxy.AbstractLocatorHandler.invoke(AbstractLocatorHandler.java:272)
+	at org.fluentlenium.core.proxy.ComponentHandler.invoke(ComponentHandler.java:98)
+	at com.sun.proxy.$Proxy18.click(Unknown Source)
+	at org.fluentlenium.core.domain.FluentWebElement.click(FluentWebElement.java:113)
+	at com.apache.urp.page.MainPage.clickZuZhiJiaGou(MainPage.java:46)
+	at com.apache.urpcase.ZuzhijiagouCase01.editZuZhiJiaGou(ZuzhijiagouCase01.java:101)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -96,30 +199,128 @@ Session ID: 7b6d7a84a72e2627654fa16f7afcc781
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addNoticeCase01 -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:org.fluentlenium.example.spring.Case1@7cbd213e]" name="afterMethod" is-config="true" duration-ms="830" started-at="2018-06-05T09:11:47Z" finished-at="2018-06-05T09:11:47Z">
+        </test-method> <!-- editZuZhiJiaGou -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@43bd930a]" name="afterMethod" is-config="true" duration-ms="907" started-at="2018-07-09T16:57:15Z" finished-at="2018-07-09T16:57:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addNoticeCase01 status=FAILURE method=Case1.addNoticeCase01()[pri:0, instance:org.fluentlenium.example.spring.Case1@7cbd213e] output={null}]]]>
+                <![CDATA[[TestResult name=editZuZhiJiaGou status=FAILURE method=ZuzhijiagouCase01.editZuZhiJiaGou()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@43bd930a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:org.fluentlenium.example.spring.Case1@7cbd213e]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-06-05T09:11:47Z" finished-at="2018-06-05T09:11:47Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@43bd930a]" name="beforeMethod" is-config="true" duration-ms="3540" started-at="2018-07-09T16:57:16Z" finished-at="2018-07-09T16:57:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.apache.urpcase.ZuzhijiagouCase01.deleteZuZhiJiaGou()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@3c46e67a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="deleteZuZhiJiaGou()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@43bd930a]" name="deleteZuZhiJiaGou" duration-ms="13807" started-at="2018-07-09T16:57:19Z" finished-at="2018-07-09T16:57:33Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[chrome not reachable
+  (Session info: chrome=60.0.3112.113)
+  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 6.1.7600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'BAD-PC', ip: '192.168.71.23', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_92'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\ADMINI~1\AppData\Local\Temp\scoped_dir3616_15059}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 5899c633aab3f107fa2e5507c59a4647]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=60.0.3112.113)
+  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 6.1.7600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'BAD-PC', ip: '192.168.71.23', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_92'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\ADMINI~1\AppData\Local\Temp\scoped_dir3616_15059}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 5899c633aab3f107fa2e5507c59a4647
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:703)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:388)
+	at org.fluentlenium.core.FluentDriver.takeScreenShot(FluentDriver.java:175)
+	at org.fluentlenium.core.inject.ContainerFluentControl.takeScreenShot(ContainerFluentControl.java:20)
+	at org.fluentlenium.adapter.FluentAdapter.takeScreenShot(FluentAdapter.java:51)
+	at com.apache.urpcase.ZuzhijiagouCase01.deleteZuZhiJiaGou(ZuzhijiagouCase01.java:155)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteZuZhiJiaGou -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@43bd930a]" name="afterMethod" is-config="true" duration-ms="631" started-at="2018-07-09T16:57:33Z" finished-at="2018-07-09T16:57:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteZuZhiJiaGou status=FAILURE method=ZuzhijiagouCase01.deleteZuZhiJiaGou()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@43bd930a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@43bd930a]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-07-09T16:57:34Z" finished-at="2018-07-09T16:57:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:org.fluentlenium.example.spring.Case1@7cbd213e]" name="afterTest" is-config="true" duration-ms="1" started-at="2018-06-05T09:11:47Z" finished-at="2018-06-05T09:11:47Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@43bd930a]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-07-09T16:57:34Z" finished-at="2018-07-09T16:57:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- org.fluentlenium.example.spring.Case1 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.apache.urpcase.ZuzhijiagouCase01 -->
+    </test> <!-- zuzhijiagouCase01 -->
+  </suite> <!-- urpxitong -->
 </testng-results>

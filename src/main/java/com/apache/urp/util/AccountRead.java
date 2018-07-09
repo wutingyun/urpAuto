@@ -15,7 +15,6 @@ public class AccountRead {
 	}
 	
 	public static String getExcelPath(){
-		//return path.replace("file:/", "") + "account.xls";
 		
 		path = path.replace("file:/", "");
 		String basePath = StringUtils.substringBeforeLast(path, "target");
