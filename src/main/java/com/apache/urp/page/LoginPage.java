@@ -13,13 +13,13 @@ import com.apache.urp.util.Account;
 
 @PageUrl("/login")
 public class LoginPage extends FluentPage {
-	@FindBy(name = "username")
+	@FindBy(id = "username")
 	private FluentWebElement usernameInput;   //登录页面，用户名
-	@FindBy(name = "password")
+	@FindBy(id = "password")
 	private FluentWebElement passwordInput;  //登录页面，密码
-	@FindBy(className = "login-button")
+	@FindBy(className = "btn btn-primary btn-block btn-flat")
 	private FluentWebElement loginButton;   //登录页面，登录按钮
-	@FindBy(css = "#errorLogin")
+	@FindBy(css = "#formerror")
 	private FluentWebElement errorLogin;//登录页面，登录不成功的错误信息
 	
 	@Page

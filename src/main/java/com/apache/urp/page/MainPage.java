@@ -8,36 +8,47 @@ import org.openqa.selenium.support.FindBy;
 
 @PageUrl("/")
 public class MainPage extends FluentPage {
-	@FindBy(xpath = "/html/body/div[1]/aside/section/ul/li[4]/a/span")
-	private FluentWebElement clickTongZhiGongGao; // 点击一级菜单 通知公告
+	@FindBy(xpath = "/html/body/div[1]/aside/section/ul/li[2]/a/span")
+	private FluentWebElement clickHouTaiManage; // 点击一级菜单 后台管理
 	
-	@FindBy(xpath = "/html/body/div[1]/aside/section/ul/li[4]/ul/li[2]/a")
-	private FluentWebElement clickFaSongLieBiao;// 点击二级菜单 发送列表
+	@FindBy(xpath = "/html/body/div[1]/aside/section/ul/li[2]/ul/li[2]/a")
+	private FluentWebElement clickZuZhiJiaGou;// 点击二级菜单 组织架构
+	
+	@FindBy(xpath = "/html/body/div[1]/aside/section/ul/li[2]/ul/li[3]/a")
+	private FluentWebElement clickYongHuManage;// 点击二级菜单 用户管理
 
 	@Page
-	private FaSongLieBiaoPage fasongliebiaoPage; // 通知公告>>发送列表页面
+	private ZuZhiJiaGouPage zuZhiJiaGouPage; // 组织架构>>组织架构页面
+	@Page
+	private YongHuManagePage yongHuManagePage; // 用户管理>>用户管理页面
+	
 
-	public MainPage clickTongZhiGongGao() {
-		clickTongZhiGongGao.click();
+	/**
+	 * 点击后台管理，进入后台管理模块
+	 * @return
+	 */
+	public MainPage clickHouTaiManage() {
+		clickHouTaiManage.click();
 		return this;
 	}
 	
-	
-	/*public void awaitUntilDisplay(FluentWebElement fluentWebElement) {
-		 await().atMost(5, TimeUnit.SECONDS).until(fluentWebElement).displayed();
-	}*/
 
-	public void waitSec(int sec) {
-		try {
-			Thread.sleep(sec*1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+	/**
+	 * 进入后台管理模块后， 点击组织架构，进入组织架构页面
+	 * @return
+	 */
+	public ZuZhiJiaGouPage clickZuZhiJiaGou() {
+		clickZuZhiJiaGou.click();
+		return zuZhiJiaGouPage;
 	}
-
-	public FaSongLieBiaoPage clickFaSongLieBiao() {
-		clickFaSongLieBiao.click();
-		return fasongliebiaoPage;
+	
+	/**
+	 * 进入后台管理模块后，点击用户管理，进入用户管理页面
+	 * @return
+	 */
+	public YongHuManagePage clickYongHuManage() {
+		clickYongHuManage.click();
+		return yongHuManagePage;
 	}
 
 }

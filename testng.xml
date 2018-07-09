@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="mqsb" parallel="false" configfailurepolicy="continue"
+<suite name="urp" parallel="false" configfailurepolicy="continue"
 	skipfailedinvocationcounts="true" preserve-order="true">
-	<!--基础信息,户籍人口 -->
-	<test name="Case1" verbose="10"> <!--测试用例：通知公告>>发送列表，新增功能验证 -->
+	<!--URP系统，后台管理-->
+	<test name="zuzhijiagouCase01" verbose="10"> <!--测试用例：系统管理>>组织架构，组织架构的新增、编辑、删除，并对其验证-->
 		<classes>
-			<class name="org.fluentlenium.example.spring.Case1">
+			<class name="com.apache.urpcase.ZuzhijiagouCase01">
 				<methods>
-					<include name="addNoticeCase01" />
-					<!-- <exclude name="EditPeople" /> -->
+					<include name="addZuZhiJiaGou" />
+					<include name="editZuZhiJiaGou" />
+					<include name="deleteZuZhiJiaGou" />
 				</methods>
 			</class>
 		</classes>
 	</test>
+	
+	
+	
 
 	<!-- reportNg是对testng输入报告美化的插件。测试后能生成比testng自带的输出报告更美观的报告 -->
 	<listeners>

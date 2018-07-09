@@ -3,11 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>fluentlenium-examples</artifactId>
-	<groupId>org.fluentlenium</groupId>
+	<artifactId>urpAuto</artifactId>
+	<groupId>com.apache.urp</groupId>
 	<version>3.4.1</version>
 
-	<name>FluentLenium Examples Spring</name>
+	<name>FluentLenium URP</name>
 
 	<properties>
 		<!-- Configure this property to latest available version -->
