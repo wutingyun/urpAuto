@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="mqsb" parallel="false" configfailurepolicy="continue"
+	skipfailedinvocationcounts="true" preserve-order="true">
+	<!--基础信息,户籍人口 -->
+	<test name="Case1" verbose="10"> <!--测试用例：通知公告>>发送列表，新增功能验证 -->
+		<classes>
+			<class name="org.fluentlenium.example.spring.Case1">
+				<methods>
+					<include name="addNoticeCase01" />
+					<!-- <exclude name="EditPeople" /> -->
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<!-- reportNg是对testng输入报告美化的插件。测试后能生成比testng自带的输出报告更美观的报告 -->
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+
+</suite> <!-- Suite -->
