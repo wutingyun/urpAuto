@@ -19,7 +19,7 @@ public class LoginPage extends FluentPage {
 	private FluentWebElement passwordInput;  //登录页面，密码
 	@FindBy(xpath = "//*[@id=\"defaultForm\"]/div[2]/button")
 	private FluentWebElement loginButton;   //登录页面，登录按钮
-	@FindBy(css = "#formerror")
+	@FindBy(css = ".formerror")
 	private FluentWebElement errorLogin;//登录页面，登录不成功的错误信息
 	
 	@Page

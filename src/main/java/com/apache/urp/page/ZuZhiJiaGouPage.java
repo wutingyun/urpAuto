@@ -1,29 +1,33 @@
 package com.apache.urp.page;
 
+import java.util.concurrent.TimeUnit;
+
 import org.fluentlenium.core.FluentPage;
+import org.fluentlenium.core.conditions.FluentConditions;
 import org.fluentlenium.core.domain.FluentWebElement;
+import org.fluentlenium.core.wait.FluentWait;
 import org.openqa.selenium.support.FindBy;
 
 public class ZuZhiJiaGouPage  extends FluentPage  {
 	
-	@FindBy(css = ".treeUl_1_span")
+	@FindBy(css = "#treeUl_1_a")
 	private FluentWebElement zuzhijiagou_shu;   //树“组织架构”
 	
 	@FindBy(xpath= "//*[@id=\"orgContent\"]/section/div/div/div/div[1]/a[1]")
 	private FluentWebElement addZuzhijiagou;   //新增组织架构
 	
-	@FindBy(css = ".name")
+	@FindBy(css = "#name")
 	private FluentWebElement name;   //在新增组织架构页面，输入名称处
-	@FindBy(css = ".tel")
+	@FindBy(css = "#tel")
 	private FluentWebElement tel;   //在新增组织架构页面，输入电话号码处
-	@FindBy(css = ".address")
+	@FindBy(css = "#address")
 	private FluentWebElement dizhi;   //在新增组织架构页面，输入地址处
-	@FindBy(className = "btn btn-primary")
+	@FindBy(css = "#defaultOrgForm > div.box-footer > button")
 	private FluentWebElement baocun;   //在新增组织架构页面，点击保存处
 	
-	@FindBy(css = "#sname")
+	@FindBy(css = "#seachOrgForm > div > input")
 	private FluentWebElement sname; //右上角的查询框处
-	@FindBy(className = "btn btn-sm btn-default")
+	@FindBy(css = "#seachOrgForm > div > div > button")
 	private FluentWebElement selectBtn; //点击查询按钮处
 	
 	@FindBy(xpath = "//*[@id=\"orgContent\"]/section/div/div/div/div[2]/div/table/tbody/tr[2]/td[2]")
@@ -63,6 +67,14 @@ public class ZuZhiJiaGouPage  extends FluentPage  {
 	 */
 	public void selectByZuzhimingcheng(String zuzhimingcheng) {
 		sname.write(zuzhimingcheng);
+		//sname.fill().with(zuzhimingcheng);
+		await().atMost(3, TimeUnit.SECONDS).until(sname).value(zuzhimingcheng);//等待搜索框弹出
+		
+		/** 等待条件参考
+		 * await().atMost(5, TimeUnit.SECONDS).until($(".fluent", withText("myText"))).size(3);
+			await().atMost(5, TimeUnit.SECONDS).until($(".fluent", withText().startsWith("start"))).present();
+		 */
+		
 		selectBtn.click();
 	}
 	
@@ -89,7 +101,7 @@ public class ZuZhiJiaGouPage  extends FluentPage  {
 	public void edit(String zuzhimingcheng2) {
 		name.clear(); //清除机构名称内容
 		name.write(zuzhimingcheng2); //输入修正的机构名称
-		
+		baocun.click();//保存
 	}
 
 	/**

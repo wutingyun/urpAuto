@@ -3,18 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.apache.urpcase.ZuzhijiagouCase01">
+      <class name="com.apache.urpcase.ZuzhijiagouCase01Huenbin">
         <methods>
-          <include name="deleteZuZhiJiaGou"/>
-          <include name="afterTest"/>
-          <include name="addZuZhiJiaGou"/>
-          <include name="beforeMethod"/>
           <include name="beforeTest"/>
+          <include name="zuZhiJiaGou"/>
+          <include name="afterTest"/>
+          <include name="beforeMethod"/>
           <include name="afterClass"/>
-          <include name="editZuZhiJiaGou"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.apache.urpcase.ZuzhijiagouCase01 -->
+      </class> <!-- com.apache.urpcase.ZuzhijiagouCase01Huenbin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -48,7 +48,7 @@ public class ZuzhijiagouCase01 extends BaseFluentTest {
 		telnumber = TelNumber.getTel();
 		address = "测试组织地址" + CommonRandUtil.getDate() + "-" + CommonRandUtil.getRam();
 		zuzhimingchengedit = "测试组织名称编辑" + CommonRandUtil.getDate() + "-" + CommonRandUtil.getRam();
-
+		
 	}
 
 	/**

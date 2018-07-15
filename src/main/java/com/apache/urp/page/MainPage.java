@@ -8,18 +8,23 @@ import org.openqa.selenium.support.FindBy;
 
 @PageUrl("/")
 public class MainPage extends FluentPage {
-	@FindBy(xpath = "/html/body/div[1]/aside/section/ul/li[2]/a/span")
+	
+	
+	@FindBy(css = "body > div.wrapper > aside > section > ul > li:nth-child(2)")
+	//@FindBy(xpath = "/html/body/div[1]/aside/section/ul/li[2]/a/span")
 	private FluentWebElement clickHouTaiManage; // 点击一级菜单 后台管理
 	
-	@FindBy(xpath = "/html/body/div[1]/aside/section/ul/li[2]/ul/li[2]/a")
+	//body > div.wrapper > aside > section > ul > li.treeview.active > ul > li.active > a
+	@FindBy(css = "body > div.wrapper > aside > section > ul > li:nth-child(2) > ul > li:nth-child(2) > a")
+	//@FindBy(xpath = "/html/body/div[1]/aside/section/ul/li[2]/ul/li[2]/a")
 	private FluentWebElement clickZuZhiJiaGou;// 点击二级菜单 组织架构
 	
 	@FindBy(xpath = "/html/body/div[1]/aside/section/ul/li[2]/ul/li[3]/a")
 	private FluentWebElement clickYongHuManage;// 点击二级菜单 用户管理
 	
-	@FindBy(xpath = "/html/body/div[1]/header/nav/div/ul/li/a/span")
+	@FindBy(css = "body > div.wrapper > header > nav > div > ul > li > a")
 	private FluentWebElement clickZhangHao;// 点击首页面的右上角账号
-	@FindBy(className = "btn btn-default btn-flat")
+	@FindBy(css = "body > div.wrapper > header > nav > div > ul > li > ul > li.user-footer > div.pull-right > a")
 	private FluentWebElement clickTuiChu;// 点击首页面的右上角账号后，点击退出
 
 	@Page
@@ -33,7 +38,11 @@ public class MainPage extends FluentPage {
 	 * @return
 	 */
 	public MainPage clickHouTaiManage() {
-		clickHouTaiManage.click();
+		String css = clickHouTaiManage.attribute("class");
+		System.out.println(css);
+		if(!css.contains("active")){
+			clickHouTaiManage.click();
+		}
 		return this;
 	}
 	

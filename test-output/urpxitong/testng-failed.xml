@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite configfailurepolicy="continue" guice-stage="DEVELOPMENT" name="Failed suite [urpxitong]" skipfailedinvocationcounts="true">
+  <test name="zuzhijiagouCase01(failed)">
     <classes>
       <class name="com.apache.urpcase.ZuzhijiagouCase01Huenbin">
         <methods>
           <include name="beforeTest"/>
-          <include name="zuZhiJiaGou"/>
+          <include name="editZuZhiJiaGou"/>
           <include name="afterTest"/>
+          <include name="deleteZuZhiJiaGou"/>
           <include name="beforeMethod"/>
           <include name="afterClass"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- com.apache.urpcase.ZuzhijiagouCase01Huenbin -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- zuzhijiagouCase01(failed) -->
+</suite> <!-- Failed suite [urpxitong] -->
