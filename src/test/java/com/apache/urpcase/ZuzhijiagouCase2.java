@@ -50,7 +50,7 @@ public class ZuzhijiagouCase2 extends BaseFluentTest {
 	 */
 	@Test
 	public void addZuZhiJiaGou() {
-		zuzhijiagouCase1.addZuZhiJiaGou();
+	//	zuzhijiagouCase1.addZuZhiJiaGou();
 	}
 
 	/**
@@ -58,7 +58,7 @@ public class ZuzhijiagouCase2 extends BaseFluentTest {
 	 */
 	@Test
 	public void shouQuanZuZhiJiaGou() {
-		zuzhijiagouCase1.addZuZhiJiaGou();
+	//	zuzhijiagouCase1.addZuZhiJiaGou();
 	}
 
 	@AfterTest

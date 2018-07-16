@@ -9,7 +9,7 @@ import com.apache.urp.page.YongHuManagePage;
 import com.apache.urp.page.ZuZhiJiaGouPage;
 import com.apache.urp.util.Account;
 
-public class UrpFluentTest extends BaseFluentTest {
+public class UrpOrgFluentTest extends BaseFluentTest {
 
 	public Account currentAccount;
 
