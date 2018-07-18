@@ -39,23 +39,17 @@ public class NewZuzhijiagouCase01 extends NewUrpOrgFluentTest {
 				+ CommonRandUtil.getRam();
 
 	}
-	
-	
-	
 
 	@Test
 	public void zuZhiJiaGou() {
 
 		addZuZhiJiaGou(accounts.get(0), zuzhimingcheng, telnumber, address);
-		//logout();
+		// logout();
 		editZuZhiJiaGou(accounts.get(0), zuzhimingcheng, zuzhimingchengedit);
 		logout();
 	}
-	
 
-
-
-	//@Test
+	// @Test
 	public void deleteZuZhiJiaGou() {
 		try {
 			goTo(loginPage);
@@ -94,6 +88,6 @@ public class NewZuzhijiagouCase01 extends NewUrpOrgFluentTest {
 
 	@AfterTest
 	public void afterTest() {
-		
+
 	}
 }
