@@ -6,18 +6,17 @@ import java.util.concurrent.TimeUnit;
 import org.fluentlenium.core.hook.wait.Wait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.apache.urp.UrpOrgFluentTest;
+import com.apache.urp.NewUrpOrgFluentTest;
 import com.apache.urp.util.Account;
 import com.apache.urp.util.AccountRead;
 import com.apache.urp.util.CommonRandUtil;
 import com.apache.urp.util.TelNumber;
 
 @Wait(timeout = 5, timeUnit = TimeUnit.SECONDS)
-public class ZuzhijiagouCase01 extends UrpOrgFluentTest {
+public class NewZuzhijiagouCase01 extends NewUrpOrgFluentTest {
 	/**
 	 * 系统管理>>组织架构，组织架构的新增、编辑、删除
 	 */
@@ -48,27 +47,11 @@ public class ZuzhijiagouCase01 extends UrpOrgFluentTest {
 	public void zuZhiJiaGou() {
 
 		addZuZhiJiaGou(accounts.get(0), zuzhimingcheng, telnumber, address);
-		waitMillis(500);
 		//logout();
 		editZuZhiJiaGou(accounts.get(0), zuzhimingcheng, zuzhimingchengedit);
-		waitMillis(100);
 		logout();
 	}
 	
-	//@Test
-	public void zuZhiJiaGou2() {
-
-		editZuZhiJiaGou(accounts.get(0), zuzhimingcheng, zuzhimingchengedit);
-		waitMillis(100);
-		logout();
-	}
-
-	
-	@Test
-	public void zuZhiJiaGou3() {
-
-		waitMillis(100);
-	}
 
 
 

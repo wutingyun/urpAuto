@@ -17,7 +17,7 @@ public enum BrowserType {
 	CHROME {
 		@Override
 		public WebDriver getWebDriver() {
-			System.setProperty("webdriver.chrome.driver", "D:\\git\\mqsbDemo\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 			//ChromeDriver chromeDriver = new ChromeDriver();
 			
 			ChromeOptions options = new ChromeOptions();

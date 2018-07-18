@@ -2,55 +2,59 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13263" started-at="2018-07-15T14:20:53Z" finished-at="2018-07-15T14:21:06Z">
+  <suite name="Default suite" duration-ms="13727" started-at="2018-07-18T09:07:14Z" finished-at="2018-07-18T09:07:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13263" started-at="2018-07-15T14:20:53Z" finished-at="2018-07-15T14:21:06Z">
-      <class name="com.apache.urpcase.ZuzhijiagouCase01Huenbin">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01Huenbin@42eca56e]" name="beforeTest" is-config="true" duration-ms="133" started-at="2018-07-15T22:20:53Z" finished-at="2018-07-15T22:20:53Z">
+    <test name="Default test" duration-ms="13727" started-at="2018-07-18T09:07:14Z" finished-at="2018-07-18T09:07:28Z">
+      <class name="com.apache.urpcase.NewZuzhijiagouCase01">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.apache.urpcase.NewZuzhijiagouCase01@569cfc36]" name="beforeTest" is-config="true" duration-ms="131" started-at="2018-07-18T17:07:14Z" finished-at="2018-07-18T17:07:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01Huenbin@42eca56e]" name="beforeMethod" is-config="true" duration-ms="3805" started-at="2018-07-15T22:20:53Z" finished-at="2018-07-15T22:20:57Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.apache.urpcase.NewZuzhijiagouCase01@569cfc36]" name="beforeMethod" is-config="true" duration-ms="3580" started-at="2018-07-18T17:07:14Z" finished-at="2018-07-18T17:07:18Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.apache.urpcase.ZuzhijiagouCase01Huenbin.zuZhiJiaGou()]]>
+                <![CDATA[public void com.apache.urpcase.NewZuzhijiagouCase01.zuZhiJiaGou()]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@5b7a5baa]]>
+                <![CDATA[org.testng.TestRunner@43bc63a3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="zuZhiJiaGou()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01Huenbin@42eca56e]" name="zuZhiJiaGou" duration-ms="8572" started-at="2018-07-15T22:20:57Z" finished-at="2018-07-15T22:21:05Z">
+        <test-method status="PASS" signature="waitAop()[pri:0, instance:com.apache.urpcase.NewZuzhijiagouCase01@569cfc36]" name="waitAop" is-config="true" duration-ms="1" started-at="2018-07-18T17:07:18Z" finished-at="2018-07-18T17:07:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- waitAop -->
+        <test-method status="PASS" signature="zuZhiJiaGou()[pri:0, instance:com.apache.urpcase.NewZuzhijiagouCase01@569cfc36]" name="zuZhiJiaGou" duration-ms="9384" started-at="2018-07-18T17:07:18Z" finished-at="2018-07-18T17:07:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- zuZhiJiaGou -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01Huenbin@42eca56e]" name="afterMethod" is-config="true" duration-ms="740" started-at="2018-07-15T22:21:05Z" finished-at="2018-07-15T22:21:06Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.apache.urpcase.NewZuzhijiagouCase01@569cfc36]" name="afterMethod" is-config="true" duration-ms="622" started-at="2018-07-18T17:07:27Z" finished-at="2018-07-18T17:07:28Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=zuZhiJiaGou status=SUCCESS method=ZuzhijiagouCase01Huenbin.zuZhiJiaGou()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01Huenbin@42eca56e] output={null}]]]>
+                <![CDATA[[TestResult name=zuZhiJiaGou status=SUCCESS method=NewZuzhijiagouCase01.zuZhiJiaGou()[pri:0, instance:com.apache.urpcase.NewZuzhijiagouCase01@569cfc36] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01Huenbin@42eca56e]" name="afterClass" is-config="true" duration-ms="1" started-at="2018-07-15T22:21:06Z" finished-at="2018-07-15T22:21:06Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.apache.urpcase.NewZuzhijiagouCase01@569cfc36]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-07-18T17:07:28Z" finished-at="2018-07-18T17:07:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01Huenbin@42eca56e]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-07-15T22:21:06Z" finished-at="2018-07-15T22:21:06Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.apache.urpcase.NewZuzhijiagouCase01@569cfc36]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-07-18T17:07:28Z" finished-at="2018-07-18T17:07:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.apache.urpcase.ZuzhijiagouCase01Huenbin -->
+      </class> <!-- com.apache.urpcase.NewZuzhijiagouCase01 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
