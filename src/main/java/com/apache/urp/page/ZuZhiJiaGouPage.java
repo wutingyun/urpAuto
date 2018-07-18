@@ -1,4 +1,4 @@
-package com.apache.urp.newpage;
+package com.apache.urp.page;
 
 import java.util.concurrent.TimeUnit;
 

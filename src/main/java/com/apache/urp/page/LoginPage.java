@@ -1,4 +1,4 @@
-package com.apache.urp.newpage;
+package com.apache.urp.page;
 
 import org.fluentlenium.core.annotation.Page;
 import org.fluentlenium.core.annotation.PageUrl;

@@ -9,14 +9,14 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.apache.urp.NewUrpOrgFluentTest;
+import com.apache.urp.UrpOrgFluentTest;
 import com.apache.urp.util.Account;
 import com.apache.urp.util.AccountRead;
 import com.apache.urp.util.CommonRandUtil;
 import com.apache.urp.util.TelNumber;
 
 @Wait(timeout = 5, timeUnit = TimeUnit.SECONDS)
-public class NewZuzhijiagouCase01 extends NewUrpOrgFluentTest {
+public class NewZuzhijiagouCase01 extends UrpOrgFluentTest {
 	/**
 	 * 系统管理>>组织架构，组织架构的新增、编辑、删除
 	 */

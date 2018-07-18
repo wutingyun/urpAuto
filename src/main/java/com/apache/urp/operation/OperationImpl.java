@@ -4,6 +4,9 @@ import org.fluentlenium.core.domain.FluentWebElement;
 
 public class OperationImpl implements IOperation {
 
+	/**
+	 * 动作接口的实现类
+	 */
 	@Override
 	public void handlerWrite(FluentWebElement input, String value) {
 		input.clear();

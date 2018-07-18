@@ -6,6 +6,9 @@ import com.apache.urp.operation.IOperation;
 import com.apache.urp.operation.OperationImpl;
 
 public class OperationAopPage extends FluentPage {
+	/**
+	 * 页面里面的动作接口
+	 */
 	protected IOperation operation;
 
 	public OperationAopPage() {
