@@ -10,7 +10,6 @@ public class OperationAopPage extends FluentPage {
 
 	public OperationAopPage() {
 		operation = new OperationImpl();
-		System.out.println(operation);
 	}
 
 	public IOperation getOperation() {
