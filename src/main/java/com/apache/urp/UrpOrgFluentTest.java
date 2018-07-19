@@ -5,14 +5,14 @@ import org.testng.Assert;
 
 import com.apache.urp.page.LoginPage;
 import com.apache.urp.page.MainPage;
-import com.apache.urp.page.YongHuManagePage;
+import com.apache.urp.page.UserManagePage;
 import com.apache.urp.page.ZuZhiJiaGouPage;
 import com.apache.urp.util.Account;
 
 public class UrpOrgFluentTest extends BaseFluentTest {
 
-	//后台管理>>组织架构模块
-	
+	// 后台管理>>组织架构模块
+
 	public Account currentAccount;
 
 	@Page
@@ -22,10 +22,11 @@ public class UrpOrgFluentTest extends BaseFluentTest {
 	@Page
 	protected ZuZhiJiaGouPage zuZhiJiaGouPage;// 组织架构页面
 	@Page
-	protected YongHuManagePage yongHuManagePage;// 组织架构页面
+	protected UserManagePage userManagePage;// 用户管理页面
 
 	/**
 	 * 检测当前账号是否为待登录账号。当当前账号为空或者不等于待登录账号，去打开登录页面，并登录；
+	 * 
 	 * @param account
 	 */
 	protected void checkOrLogin(Account account) {
@@ -38,6 +39,7 @@ public class UrpOrgFluentTest extends BaseFluentTest {
 
 	/**
 	 * 组织架构新增
+	 * 
 	 * @param account
 	 * @param orgName
 	 * @param telnumber
@@ -73,10 +75,52 @@ public class UrpOrgFluentTest extends BaseFluentTest {
 		}
 
 	}
-	
+
+	/**
+	 * 组织架构新增
+	 * 
+	 * @param account
+	 * @param orgName
+	 * @param telnumber
+	 * @param address
+	 */
+	public String addZuZhiJiaGou01(Account account, String orgName, String telnumber, String address) {
+		try {
+			checkOrLogin(account);
+			// 在主页面，点击一级菜单后台管理，点击二级菜单组织架构。
+			mainPage.clickHouTaiManage();
+			mainPage.clickZuZhiJiaGou();
+
+			// 在组织架构页面，点击树“组织架构”
+			zuZhiJiaGouPage.clickZuZhiJiaGou_shu();
+			// 在组织架构页面，新增组织。
+			zuZhiJiaGouPage.add(orgName, telnumber, address);
+
+			// 组织添加完成之后，输入“组织机构名称”，点击“查询”
+			zuZhiJiaGouPage.selectByZuzhimingcheng(orgName);
+
+			// 将查询出来的结果，提取该组织名称
+			String newOrgName = zuZhiJiaGouPage.getOrgName();
+			System.out.println(orgName + "=" + newOrgName);
+
+			// 新增的组织与查询出来的组织，比较标题是否一致，若一致，则说明新增成功。
+			Assert.assertEquals(newOrgName, orgName, "组织名称新增不成功！");
+
+			return newOrgName;
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			takeScreenShot("D:\\新增组织架构.jpg");
+			takeHtmlDump("D:\\新增组织架构.html");
+			throw e;
+		}
+
+	}
 
 	/**
 	 * 组织架构编辑
+	 * 
 	 * @param account
 	 * @param orgName
 	 * @param orgNameNewName
@@ -97,7 +141,7 @@ public class UrpOrgFluentTest extends BaseFluentTest {
 			// 验证是否编辑成功
 			zuZhiJiaGouPage.selectByZuzhimingcheng(orgNameNewName);// 组织添加完成之后，输入“组织机构名称”，点击“查询”
 			String newZuZhiMingChengedit = zuZhiJiaGouPage.getOrgName();// 将查询出来的结果，提取该组织名称
-			
+
 			System.out.println(orgNameNewName + "=" + newZuZhiMingChengedit);
 			Assert.assertEquals(newZuZhiMingChengedit, orgNameNewName, "组织机构编辑不成功！");
 
@@ -111,6 +155,7 @@ public class UrpOrgFluentTest extends BaseFluentTest {
 
 	/**
 	 * 组织架构删除
+	 * 
 	 * @param account
 	 * @param zuzhimingchengedit
 	 */
@@ -136,10 +181,9 @@ public class UrpOrgFluentTest extends BaseFluentTest {
 
 			// 输入“组织机构名称”，点击“查询”
 			String newOrgNameEdit = zuZhiJiaGouPage.getOrgName();// 将查询出来的结果，提取该组织名称
-			
-			System.out.println("删除之后的查询结果"+ "=" + newOrgNameEdit);
+
+			System.out.println("删除之后的查询结果" + "=" + newOrgNameEdit);
 			Assert.assertNull(newOrgNameEdit, "删除不成功");
-			
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -149,8 +193,14 @@ public class UrpOrgFluentTest extends BaseFluentTest {
 		}
 
 	}
-	
-	public void grantZuZhiJiaGou(Account account,String orgName){
+
+	/**
+	 * 组织授权
+	 * 
+	 * @param account
+	 * @param orgName
+	 */
+	public void grantZuZhiJiaGou(Account account, String orgName) {
 		checkOrLogin(account);
 		// 在主页面，点击一级菜单后台管理，点击二级菜单组织架构。
 		mainPage.clickHouTaiManage();
@@ -159,19 +209,37 @@ public class UrpOrgFluentTest extends BaseFluentTest {
 		zuZhiJiaGouPage.clickZuZhiJiaGou_shu();
 		// 组织添加完成之后，输入“组织机构名称”，点击“查询”
 		zuZhiJiaGouPage.selectByZuzhimingcheng(orgName);
-		
+
 		// 给某组织组织授权
 		zuZhiJiaGouPage.clickGrant();
-		
+
 	}
 
-	
+	/**
+	 * 针对组织架构，为其新增用户 ---通过循环的方式，查找到组织架构为newOrgName的，并且点击它，在该组织下新增用户
+	 * 
+	 * @param account
+	 * @param orgName
+	 * @param username
+	 * @param zhiwu
+	 * @param telnumber
+	 */
+	public void addUser(Account account, String newOrgName, String username, String zhiwu, String telnumber) {
+		checkOrLogin(account);
+		// 在主页面，点击一级菜单后台管理，点击二级菜单用户管理。
+		mainPage.clickHouTaiManage();
+		mainPage.clickUserManage();
+		// 在组织架构页面，点击树“组织架构”
+		userManagePage.clickZuZhiJiaGou_shu();
+
+		// 通过循环的方式，查找到组织架构为newOrgName的，并且点击它，在该组织下新增用户
+
+	}
+
 	public void logout() {
 		// 退出
 		mainPage.tuichu();
 		currentAccount = null;
 	}
-
-	
 
 }

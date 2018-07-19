@@ -21,7 +21,7 @@ public class MainPage extends OperationAopPage {
 	private FluentWebElement clickZuZhiJiaGou;// 点击二级菜单 组织架构
 
 	@FindBy(xpath = "/html/body/div[1]/aside/section/ul/li[2]/ul/li[3]/a")
-	private FluentWebElement clickYongHuManage;// 点击二级菜单 用户管理
+	private FluentWebElement clickUserManage;// 点击二级菜单 用户管理
 
 	@FindBy(css = "body > div.wrapper > header > nav > div > ul > li > a")
 	private FluentWebElement clickZhangHao;// 点击首页面的右上角账号
@@ -31,7 +31,7 @@ public class MainPage extends OperationAopPage {
 	@Page
 	private ZuZhiJiaGouPage zuZhiJiaGouPage; // 组织架构>>组织架构页面
 	@Page
-	private YongHuManagePage yongHuManagePage; // 用户管理>>用户管理页面
+	private UserManagePage userManagePage; // 用户管理>>用户管理页面
 
 	/**
 	 * 点击后台管理，进入后台管理模块
@@ -62,9 +62,9 @@ public class MainPage extends OperationAopPage {
 	 * 
 	 * @return
 	 */
-	public YongHuManagePage clickYongHuManage() {
-		operation.handlerClick(clickYongHuManage);
-		return yongHuManagePage;
+	public UserManagePage clickUserManage() {
+		operation.handlerClick(clickUserManage);
+		return userManagePage;
 	}
 
 	/**

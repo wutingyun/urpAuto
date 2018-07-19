@@ -18,7 +18,7 @@ import com.apache.urp.util.TelNumber;
 @Wait(timeout = 5, timeUnit = TimeUnit.SECONDS)
 public class ZuzhijiagouCase02 extends UrpOrgFluentTest {
 	/**
-	 * 系统管理>>组织架构，组织架构的新增、授权
+	 * 系统管理>>组织架构，组织架构的授权
 	 */
 	List<Account> accounts;
 	String orgName; // 组织名称
@@ -36,10 +36,10 @@ public class ZuzhijiagouCase02 extends UrpOrgFluentTest {
 	}
 
 	@Test
-	public void zuZhiJiaGou() {
+	public void zuZhiJiaGouCase() {
 
 		addZuZhiJiaGou(accounts.get(0), orgName, telnumber, address);
-		//logout();
+		
 		grantZuZhiJiaGou(accounts.get(0),orgName);
 		
 	}

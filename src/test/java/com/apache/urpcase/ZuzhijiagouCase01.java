@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.fluentlenium.core.hook.wait.Wait;
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -18,7 +17,7 @@ import com.apache.urp.util.TelNumber;
 @Wait(timeout = 5, timeUnit = TimeUnit.SECONDS)
 public class ZuzhijiagouCase01 extends UrpOrgFluentTest {
 	/**
-	 * 系统管理>>组织架构，组织架构的新增、编辑、删除
+	 * 后台管理>>组织架构，组织架构的新增、编辑、删除
 	 */
 	List<Account> accounts;
 	String orgName; // 组织名称
@@ -38,12 +37,13 @@ public class ZuzhijiagouCase01 extends UrpOrgFluentTest {
 	}
 
 	@Test
-	public void zuZhiJiaGou() {
+	public void zuZhiJiaGouCase() {
 
+		//新增组织架构
 		addZuZhiJiaGou(accounts.get(0), orgName, telnumber, address);
-		
+		//编辑组织架构
 		editZuZhiJiaGou(accounts.get(0), orgName, orgNameEdit);
-		
+		//删除组织架构
 		deleteZuZhiJiaGou(accounts.get(0),orgNameEdit);
 		
 	}

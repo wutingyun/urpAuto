@@ -37,6 +37,10 @@ public class ZuZhiJiaGouPage extends OperationAopPage {
 
 	@FindBy(xpath = "//*[@id=\"orgContent\"]/section/div/div/div/div[2]/div/table/tbody/tr[2]/td[5]/a[3]")
 	private FluentWebElement deleteBtn; // 针对某组织架构，点击删除按钮处。
+	
+	@FindBy(xpath = "//*[@id=\"orgContent\"]/section/div/div/div/div[2]/div/table/tbody/tr[2]/td[5]/a[1]")
+	private FluentWebElement grantBtn; // 针对某组织架构，点击授权按钮处。
+	
 
 	/**
 	 * 在组织架构页面，点击树“组织架构”
@@ -117,10 +121,11 @@ public class ZuZhiJiaGouPage extends OperationAopPage {
 	}
 
 	/**
-	 * 
+	 * 点击授权
 	 */
 	public void clickGrant() {
 
+		operation.handlerClick(grantBtn);
 	}
 
 }
