@@ -19,7 +19,7 @@ public class CommonRandUtil {
 		Date d = new Date();  
        // System.out.println(d);  
         //SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
         String dateNowStr = sdf.format(d);  
         return dateNowStr;
 	}

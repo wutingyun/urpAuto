@@ -40,7 +40,7 @@ public class MainPage extends OperationAopPage {
 	 */
 	public MainPage clickHouTaiManage() {
 		String css = clickHouTaiManage.attribute("class");
-		System.out.println(css);
+	//	System.out.println(css);
 		if (!css.contains("active")) {
 			operation.handlerClick(clickHouTaiManage);
 		}

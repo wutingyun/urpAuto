@@ -30,7 +30,7 @@ public class ZuZhiJiaGouPage extends OperationAopPage {
 	private FluentWebElement selectBtn; // 点击查询按钮处
 
 	@FindBy(xpath = "//*[@id=\"orgContent\"]/section/div/div/div/div[2]/div/table/tbody/tr[2]/td[2]")
-	private FluentWebElement getZuzhimingcheng; // 在查询结果处，提取组织机构名称处
+	private FluentWebElement getOrgName; // 在查询结果处，提取组织机构名称处
 
 	@FindBy(xpath = "//*[@id=\"orgContent\"]/section/div/div/div/div[2]/div/table/tbody/tr[2]/td[5]/a[2]")
 	private FluentWebElement editBtn; // 针对某组织架构，点击编辑按钮处。
@@ -48,9 +48,12 @@ public class ZuZhiJiaGouPage extends OperationAopPage {
 	/**
 	 * 新增组织架构 功能
 	 * 
-	 * @param zuzhimingcheng 组织机构名称
-	 * @param telnumber      组织机构电话
-	 * @param address        组织机构地址
+	 * @param zuzhimingcheng
+	 *            组织机构名称
+	 * @param telnumber
+	 *            组织机构电话
+	 * @param address
+	 *            组织机构地址
 	 */
 	public void add(String zuzhimingcheng, String telnumber, String address) {
 		operation.handlerClick(addZuzhijiagou); // 点击“新增组织架构”
@@ -70,12 +73,6 @@ public class ZuZhiJiaGouPage extends OperationAopPage {
 		// sname.fill().with(zuzhimingcheng);
 		await().atMost(3, TimeUnit.SECONDS).until(sname).value(zuzhimingcheng);// 等待搜索框弹出
 
-		/**
-		 * 等待条件参考 await().atMost(5, TimeUnit.SECONDS).until($(".fluent",
-		 * withText("myText"))).size(3); await().atMost(5,
-		 * TimeUnit.SECONDS).until($(".fluent",
-		 * withText().startsWith("start"))).present();
-		 */
 		operation.handlerClick(selectBtn);
 	}
 
@@ -84,9 +81,15 @@ public class ZuZhiJiaGouPage extends OperationAopPage {
 	 * 
 	 * @return
 	 */
-	public String getZuzhimingcheng() {
-		String newZuzhijigou = getZuzhimingcheng.text();
-		return newZuzhijigou;
+	public String getOrgName() {
+		String newZuzhijigou;
+		try {
+			newZuzhijigou = getOrgName.text();
+			return newZuzhijigou;
+		} catch (Exception e) {
+			return null;
+		}
+
 	}
 
 	/**
@@ -110,7 +113,14 @@ public class ZuZhiJiaGouPage extends OperationAopPage {
 	 * 删除组织架构
 	 */
 	public void clickDelete() {
-		operation.handlerClick(deleteBtn);// 保存
+		operation.handlerClick(deleteBtn);
+	}
+
+	/**
+	 * 
+	 */
+	public void clickGrant() {
+
 	}
 
 }
