@@ -23,15 +23,20 @@ public class MainPage extends OperationAopPage {
 	@FindBy(xpath = "/html/body/div[1]/aside/section/ul/li[2]/ul/li[3]/a")
 	private FluentWebElement clickUserManage;// 点击二级菜单 用户管理
 
+	@FindBy(xpath = "/html/body/div[1]/aside/section/ul/li[2]/ul/li[1]/a")
+	private FluentWebElement clickUserZuManage;// 点击二级菜单 用户组管理
+	
 	@FindBy(css = "body > div.wrapper > header > nav > div > ul > li > a")
 	private FluentWebElement clickZhangHao;// 点击首页面的右上角账号
 	@FindBy(css = "body > div.wrapper > header > nav > div > ul > li > ul > li.user-footer > div.pull-right > a")
 	private FluentWebElement clickTuiChu;// 点击首页面的右上角账号后，点击退出
 
 	@Page
-	private ZuZhiJiaGouPage zuZhiJiaGouPage; // 组织架构>>组织架构页面
+	private ZuZhiJiaGouPage zuZhiJiaGouPage; // 后台管理>>组织架构>>组织架构页面
 	@Page
-	private UserManagePage userManagePage; // 用户管理>>用户管理页面
+	private UserManagePage userManagePage; // 后台管理>>用户管理>>用户管理页面
+	@Page
+	private UserZuManagePage userZuManagePage;//后台管理>>用户组管理>>用户组管理页面
 
 	/**
 	 * 点击后台管理，进入后台管理模块
@@ -65,6 +70,16 @@ public class MainPage extends OperationAopPage {
 	public UserManagePage clickUserManage() {
 		operation.handlerClick(clickUserManage);
 		return userManagePage;
+	}
+	
+	/**
+	 * 进入后台管理模块后，点击用户组管理，进入用户组管理页面
+	 * 
+	 * @return
+	 */
+	public UserZuManagePage clickUserZuManage() {
+		operation.handlerClick(clickUserZuManage);
+		return userZuManagePage;
 	}
 
 	/**

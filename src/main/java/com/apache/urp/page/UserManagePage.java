@@ -4,10 +4,12 @@ import org.fluentlenium.core.domain.FluentWebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.apache.urp.aop.OperationAopPage;
+import static org.fluentlenium.core.filter.FilterConstructor.*;
+
 
 public class UserManagePage extends OperationAopPage {
 
-	@FindBy(css = "treeUl_1_span")
+	@FindBy(css = "#treeUl_1_span")
 	private FluentWebElement zuzhijiagou_shu; // 树“组织架构”
 
 	/**
@@ -15,6 +17,11 @@ public class UserManagePage extends OperationAopPage {
 	 */
 	public void clickZuZhiJiaGou_shu() {
 		operation.handlerClick(zuzhijiagou_shu);
+	}
+
+	public void selectOrg(String newOrgName) {
+		$("", withText(newOrgName));
+		
 	}
 
 }
