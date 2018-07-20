@@ -9,6 +9,10 @@
 
 	<name>FluentLenium URP</name>
 
+    <prerequisites>
+        <maven>2.0.4</maven>
+    </prerequisites>
+
 	<properties>
 		<!-- Configure this property to latest available version -->
 		<fluentlenium.version>3.4.1</fluentlenium.version>

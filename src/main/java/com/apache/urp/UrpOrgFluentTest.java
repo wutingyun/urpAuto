@@ -38,7 +38,7 @@ public class UrpOrgFluentTest extends BaseFluentTest {
 	}
 
 	/**
-	 * 组织架构新增
+	 * 组织架构模块：组织架构新增
 	 * 
 	 * @param account
 	 * @param orgName
@@ -77,7 +77,7 @@ public class UrpOrgFluentTest extends BaseFluentTest {
 	}
 
 	/**
-	 * 组织架构新增
+	 * 组织架构模块：组织架构新增
 	 * 
 	 * @param account
 	 * @param orgName
@@ -119,7 +119,7 @@ public class UrpOrgFluentTest extends BaseFluentTest {
 	}
 
 	/**
-	 * 组织架构编辑
+	 * 组织架构模块：组织架构编辑
 	 * 
 	 * @param account
 	 * @param orgName
@@ -154,7 +154,7 @@ public class UrpOrgFluentTest extends BaseFluentTest {
 	}
 
 	/**
-	 * 组织架构删除
+	 * 组织架构模块：组织架构删除
 	 * 
 	 * @param account
 	 * @param zuzhimingchengedit
@@ -195,7 +195,7 @@ public class UrpOrgFluentTest extends BaseFluentTest {
 	}
 
 	/**
-	 * 组织授权
+	 * 组织架构模块：组织授权
 	 * 
 	 * @param account
 	 * @param orgName
@@ -216,7 +216,7 @@ public class UrpOrgFluentTest extends BaseFluentTest {
 	}
 
 	/**
-	 * 针对组织架构，为其新增用户 ---通过循环的方式，查找到组织架构为newOrgName的，并且点击它，在该组织下新增用户
+	 *用户管理模块： 针对组织架构，为其新增用户 ---通过循环的方式，查找到组织架构为newOrgName的，并且点击它，在该组织下新增用户
 	 * 
 	 * @param account
 	 * @param orgName

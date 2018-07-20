@@ -2,55 +2,55 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="47185" started-at="2018-07-19T07:27:29Z" finished-at="2018-07-19T07:28:16Z">
+  <suite name="Default suite" duration-ms="25795" started-at="2018-07-20T03:46:39Z" finished-at="2018-07-20T03:47:05Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="47185" started-at="2018-07-19T07:27:29Z" finished-at="2018-07-19T07:28:16Z">
+    <test name="Default test" duration-ms="25795" started-at="2018-07-20T03:46:39Z" finished-at="2018-07-20T03:47:05Z">
       <class name="com.apache.urpcase.ZuzhijiagouCase01">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@2f54a33d]" name="beforeTest" is-config="true" duration-ms="156" started-at="2018-07-19T15:27:29Z" finished-at="2018-07-19T15:27:29Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@192d3247]" name="beforeTest" is-config="true" duration-ms="133" started-at="2018-07-20T11:46:39Z" finished-at="2018-07-20T11:46:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@2f54a33d]" name="beforeMethod" is-config="true" duration-ms="3898" started-at="2018-07-19T15:27:29Z" finished-at="2018-07-19T15:27:33Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@192d3247]" name="beforeMethod" is-config="true" duration-ms="3841" started-at="2018-07-20T11:46:39Z" finished-at="2018-07-20T11:46:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.apache.urpcase.ZuzhijiagouCase01.zuZhiJiaGou()]]>
+                <![CDATA[public void com.apache.urpcase.ZuzhijiagouCase01.zuZhiJiaGouCase()]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@b7c4869]]>
+                <![CDATA[org.testng.TestRunner@557caf28]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="waitAop()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@2f54a33d]" name="waitAop" is-config="true" duration-ms="1" started-at="2018-07-19T15:27:33Z" finished-at="2018-07-19T15:27:33Z">
+        <test-method status="PASS" signature="waitAop()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@192d3247]" name="waitAop" is-config="true" duration-ms="1" started-at="2018-07-20T11:46:43Z" finished-at="2018-07-20T11:46:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- waitAop -->
-        <test-method status="PASS" signature="zuZhiJiaGou()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@2f54a33d]" name="zuZhiJiaGou" duration-ms="42155" started-at="2018-07-19T15:27:33Z" finished-at="2018-07-19T15:28:15Z">
+        <test-method status="PASS" signature="zuZhiJiaGouCase()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@192d3247]" name="zuZhiJiaGouCase" duration-ms="20040" started-at="2018-07-20T11:46:43Z" finished-at="2018-07-20T11:47:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- zuZhiJiaGou -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@2f54a33d]" name="afterMethod" is-config="true" duration-ms="957" started-at="2018-07-19T15:28:15Z" finished-at="2018-07-19T15:28:16Z">
+        </test-method> <!-- zuZhiJiaGouCase -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@192d3247]" name="afterMethod" is-config="true" duration-ms="1770" started-at="2018-07-20T11:47:03Z" finished-at="2018-07-20T11:47:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=zuZhiJiaGou status=SUCCESS method=ZuzhijiagouCase01.zuZhiJiaGou()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@2f54a33d] output={null}]]]>
+                <![CDATA[[TestResult name=zuZhiJiaGouCase status=SUCCESS method=ZuzhijiagouCase01.zuZhiJiaGouCase()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@192d3247] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@2f54a33d]" name="afterClass" is-config="true" duration-ms="1" started-at="2018-07-19T15:28:16Z" finished-at="2018-07-19T15:28:16Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@192d3247]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-07-20T11:47:05Z" finished-at="2018-07-20T11:47:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@2f54a33d]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-07-19T15:28:16Z" finished-at="2018-07-19T15:28:16Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.apache.urpcase.ZuzhijiagouCase01@192d3247]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-07-20T11:47:05Z" finished-at="2018-07-20T11:47:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
